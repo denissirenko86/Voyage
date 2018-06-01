@@ -1,7 +1,6 @@
 @import "partials/reset";
 @import "partials/fonts";
 @import "partials/variable";
-// @import "node_modules/bootstrap/scss/bootstrap";
 
 body{
 	font-family: 'Roboto', sans-serif;
@@ -9,6 +8,10 @@ body{
 
 a {
 	text-decoration: none;
+}
+
+.d-block {
+	display: block;
 }
 
 .visual {
@@ -244,10 +247,12 @@ h1 {
 }
 
 .block-country {
+	text-align: center;
 	margin: 0 20px;
 }
 
 .block-country img {
+	margin: auto;
 	width: 266px;
 	height: 193px;
 }
@@ -255,12 +260,12 @@ h1 {
 .offers-slider h4 {
 	padding: 20px 12px 5px;
 	font-size: 15px;
-	color: #b0b0b0;
+	color: #626262;
 }
 
 .offers-slider span {
 	font-size: 13px;
-	color: #b0b0b0;
+	color: #626262;
 	padding: 5px 0 18px 12px;
 }
 
@@ -371,39 +376,63 @@ h1 {
 // /happy
 
 .contact {
+	padding: 60px 0;
 	background-color: #2c3e50;
 	border-bottom: 1px solid #394c5f;
 }
 
-.contact-list {
+.posts {
+	margin-bottom: 25px;
 	display: flex;
-	justify-content: space-between;
-	padding: 65px 0;
+	align-items: center;
 }
 
-.contact-list li {
-	width: 220px;
+.contact img {
+	margin-right: 10px;
+	border: 1px solid #fff;
 }
 
-.contact-list h2 {
+.contact-us {
+	display: flex;
+}
+
+.default-contact {
+	width: 25%;
+	text-align: left;
+}
+
+.default-contact h2 {
 	margin-bottom: 20px;
 	font-size: 25px;
 	color: #1dd2af;
 	font-weight: bold;
 }
 
-.contact-list p {
+.default-contact p {
+	margin-bottom: 5px;
 	display: inline-block;
 	font-size: 13px;
 	line-height: 22px;
 	color: #fff;
 }
 
+.default-contact {
+	font-size: 13px;
+}
+
 .contact-form {
 	margin-top: 20px;
 }
 
-.contact-list input[type="text"] {
+.contact-date {
+	color:#1dd2af;
+}
+
+.contact-mail {
+	color: #fff;
+}
+
+.contact-form input[type="text"] {
 	width: 145px;
 	height: 30px;
 	padding-left: 15px;
@@ -411,7 +440,7 @@ h1 {
 	border-radius: 2px;
 }
 
-.contact-list input[type="submit"] {
+.contact-form input[type="submit"] {
 	width: 45px;
 	height: 30px;
 	border: 1px solid #19242e;
@@ -424,18 +453,10 @@ h1 {
 	cursor: pointer;
 }
 
-.contact-date {
-	font-size: 13px;
-	color:#1dd2af;
-}
-
-.contact span {
-	font-size: 13px;
-}
-
-.contact a {
+.contact .nav-social a {
 	font-size: 25px;
 	color: #fff;
+	margin-right: 30px;
 }
 
 .nav-social {
@@ -443,7 +464,27 @@ h1 {
 	margin-top: 20px;
 }
 
-.contact.contact-social a:hover {
+.contact .nav-social a:hover {
+	color: #1dd2af;
+}
+
+.contact .contact-tags {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.contact .contact-tags li {
+	padding: 8px 10px;
+	border: 1px solid #fff;
+	margin: 5px;
+}
+
+.contact .contact-tags a {
+	font-size: 13px;
+	color: #fff;
+} 
+
+.contact .contact-tags a:hover {
 	color: #1dd2af;
 }
 
@@ -500,7 +541,7 @@ h1 {
 	border-bottom: 80px solid #1dd2af;
 }
 
-.triangle-up a {
+.triangle-up .fa-arrow-up {
 	font-size: 15px;
 	color: #fff;
 }

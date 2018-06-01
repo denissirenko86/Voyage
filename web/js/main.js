@@ -1,2 +1,2 @@
-"use strict";$(".offers-slider").slick({slidesToShow:3,slidesToScroll:1,arrows:!1,autoplay:!0,autoplaySpeed:2e3}),$(".reviews").slick({slidesToShow:4,slidesToScroll:1,arrows:!1,autoplay:!0,autoplaySpeed:2e3});
+"use strict";function onClick(l){l.preventDefault();var o=$(this).attr("data-scroll"),s=$(o).offset().top;$("html, body").animate({scrollTop:s},1e3,"swing")}$(".offers-slider").slick({slidesToShow:3,slidesToScroll:1,arrows:!1,autoplay:!0,autoplaySpeed:2e3}),$(".reviews").slick({slidesToShow:4,slidesToScroll:1,arrows:!1,autoplay:!0,autoplaySpeed:2e3});var scrollBtn=$("[data-scroll]");scrollBtn.on("click",onClick);
 //# sourceMappingURL=main.js.map
