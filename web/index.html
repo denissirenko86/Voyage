@@ -2,17 +2,17 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Voyage</title>
 	<link rel="stylesheet" href="css/style.css">
-	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">	
 </head>
 <body>
 	<section class="visual">
 		<header id="visual-header">
-			<div class="register-header">
+			<div class="register-header bg-blue">
 				<div class="container">
-					<div class="contact-header">
+					<div class="contact-header bg-blue">
 						<ul class="register">
 							<li><a href="#"><i class="fas fa-user"></i><span>Agent Login</span></a></li>
 							<li><a href="#"><i class="fas fa-user"></i><span>Customer Login</span></a></li>
@@ -35,14 +35,14 @@
 							<a href="#"><img src="img/logo.png" alt=""></a>
 						</div>
 						<nav class="main-nav">
-						<ul class="nav">
-							<li><a href="#">Home</a></li>
+							<ul class="nav">
+								<li><a href="#">Home</a></li>
 								<li><a href="#">Destinations</a></li>
 								<li><a href="#">Criuses</a></li>
 								<li><a href="#">Specials</a></li>
-								<li><a href="#">Holidays</a></li>
-								<a href="#" class="search"><i class="fas fa-search"></i></a>			
+								<li><a href="#">Holidays</a></li>		
 							</ul>
+							<a href="#" class="search"><i class="fas fa-search"></i></a>
 						</nav>			
 					</div>				
 				</div>
@@ -56,7 +56,7 @@
 			<button type="button">MORE INFO</button>
 			</div>
 		</div>
-		<footer class="visual-footer">
+		<footer class="visual-footer bg-blue">
 			<div class="container">
 				<div class="form-section">
 					<div class="text-form">
@@ -74,63 +74,82 @@
 			</div>
 		</footer>
 	</section>
-	<section class="offers">
-		<h2>Special Offers</h2>
-		<p>Best 2014 packages where people love to stay!</p>
+	<section class="offers default-section">
+		<h2 class="default-title">Special Offers</h2>
+		<p class="default-text">Best 2014 packages where people love to stay!</p>
 		<div class="offers-slider">
-			<div class="block-country"><a href="#"><img src="img/foto-1.jpg" alt=""><h4>Spectacular Seychelles</h4><span>New Destination! <i class="fas fa-angle-down"></i></span></a></div>
-			<div class="block-country"><a href="#"><img src="img/foto-2.jpg" alt=""><h4>Hong Kong & Macau</h4><span>Bonus Extras! <i class="fas fa-angle-down"></i></span></a></div>
-			<div class="block-country"><a href="#"><img src="img/foto-3.jpg" alt=""><h4>Vietnam Highlights</h4><span>New Destination! <i class="fas fa-angle-down"></i></span></a></div>
-			<div class="block-country"><a href="#"><img src="img/foto-4.jpg" alt=""><h4>Spectacular Seychelles</h4><span>New Destination! <i class="fas fa-angle-down"></i></span></a></div>
-			<div class="block-country"><a href="#"><img src="img/foto-5.jpg" alt=""><h4>Dubai</h4><span>New Destination! <i class="fas fa-angle-down"></i></span></a></div>
+			<div class="block-country" onclick="location.href='#';">
+				<img src="img/p1.jpg" alt="">
+				<h4>Spectacular Seychelles</h4><span>New Destination!</span><i class="fas fa-angle-down"></i>
+			</div>
+			<div class="block-country">
+				<img src="img/p2.jpg" alt="">
+				<h4>Spectacular Seychelles</h4><span>New Destination!</span><i class="fas fa-angle-down"></i>
+			</div>
+			<div class="block-country">
+				<img src="img/p3.jpg" alt="">
+				<h4>Spectacular Seychelles</h4><span>New Destination!</span><i class="fas fa-angle-down"></i>
+			</div>
+			<div class="block-country">
+				<img src="img/p4.jpg" alt="">
+				<h4>Spectacular Seychelles</h4><span>New Destination!</span><i class="fas fa-angle-down"></i>
+			</div>
+			<div class="block-country">
+				<img src="img/p5.jpg" alt="">
+				<h4>Spectacular Seychelles</h4><span>New Destination!</span><i class="fas fa-angle-down"></i>
+			</div>
+			<div class="block-country">
+				<img src="img/p6.jpg" alt="">
+				<h4>Spectacular Seychelles</h4><span>New Destination!</span><i class="fas fa-angle-down"></i>
+			</div>
 		</div>		
 	</section>
-	<section class="holidays">
+	<section class="holidays default-section">
 		<div class="container">
-			<h2>Holidays Type</h2>
-			<p>get explore your dream to travel the world!</p>
+			<h2 class="default-title">Holidays Type</h2>
+			<p class="default-text">get explore your dream to travel the world!</p>
 			<ul class="holidays-type">
-				<li><a href="#"><img src="img/holiday-1.png" alt=""><p>Cruise</p></a></li>
-				<li><a href="#"><img src="img/holiday-2.png" alt=""><p>City Breaks</p></a></li>
-				<li><a href="#"><img src="img/holiday-3.png" alt=""><p>Honeymoon</p></a></li>
-				<li><a href="#"><img src="img/holiday-4.png" alt=""><p>Adventure</p></a></li>
-				<li><a href="#"><img src="img/holiday-5.png" alt=""><p>Safari</p></a></li>
-				<li><a href="#"><img src="img/holiday-6.png" alt=""><p>Beach</p></a></li>
+				<li><a href="#"><img class="white" src="img/holiday-1.png" alt=""><img class="green" src="img/holiday-1-green.png" alt=""><p>Cruise</p></a></li>
+				<li><a href="#"><img class="white" src="img/holiday-2.png" alt=""><img class="green" src="img/holiday-2-green.png" alt=""><p>City Breaks</p></a></li>
+				<li><a href="#"><img class="white" src="img/holiday-3.png" alt=""><img class="green" src="img/holiday-3-green.png" alt=""><p>Honeymoon</p></a></li>
+				<li><a href="#"><img class="white" src="img/holiday-4.png" alt=""><img class="green" src="img/holiday-4-green.png" alt=""><p>Adventure</p></a></li>
+				<li><a href="#"><img class="white" src="img/holiday-5.png" alt=""><img class="green" src="img/holiday-5-green.png" alt=""><p>Safari</p></a></li>
+				<li><a href="#"><img class="white" src="img/holiday-6.png" alt=""><img class="green" src="img/holiday-6-green.png" alt=""><p>Beach</p></a></li>
 			</ul>
 		</div>
 	</section>
-	<section class="happy">
-		<h2>Happy Clients</h2>
-		<h4>what customer say about us and why love our services!</h4>
+	<section class="happy default-section">
+		<h2 class="default-title">Happy Clients</h2>
+		<p class="default-text">what customer say about us and why love our services!</p>
 		<div class="reviews">
-			<div class="client-text">
-				<a href="#">
-					<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum enim, natus, fugiat consectetur eveniet ad.</span><h3>Client Name</h3><p>United States</p>
-				</a>
+			<div class="client-text">				
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum enim, natus, fugiat consectetur eveniet ad.</p>
+				<span class="client">Client Name</span>
+				<span class="coutry">United States</span>			
 			</div>
-			<div class="client-text">
-				<a href="#">
-					<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum enim, natus, fugiat consectetur eveniet ad.</span><h3>Client Name</h3><p>United States</p>
-				</a>
+			<div class="client-text">				
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum enim, natus, fugiat consectetur eveniet ad.</p>
+				<span class="client">Client Name</span>
+				<span class="coutry">United States</span>			
 			</div>
-			<div class="client-text">
-				<a href="#">
-					<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum enim, natus, fugiat consectetur eveniet ad.</span><h3>Client Name</h3><p>United States</p>
-				</a>
+			<div class="client-text">				
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum enim, natus, fugiat consectetur eveniet ad.</p>
+				<span class="client">Client Name</span>
+				<span class="coutry">United States</span>			
 			</div>
-			<div class="client-text">
-				<a href="#">
-					<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum enim, natus, fugiat consectetur eveniet ad.</span><h3>Client Name</h3><p>United States</p>
-				</a>
+			<div class="client-text">				
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum enim, natus, fugiat consectetur eveniet ad.</p>
+				<span class="client">Client Name</span>
+				<span class="coutry">United States</span>			
 			</div>
-			<div class="client-text">
-				<a href="#">
-					<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum enim, natus, fugiat consectetur eveniet ad.</span><h3>Client Name</h3><p>United States</p>
-				</a>
+			<div class="client-text">				
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum enim, natus, fugiat consectetur eveniet ad.</p>
+				<span class="client">Client Name</span>
+				<span class="coutry">United States</span>			
 			</div>
 		</div>
 	</section>
-	<section class="contact">		
+	<section class="contact default-section">		
 		<div class="container">
 			<div class="contact-us">
 				<div class="default-contact"> 
@@ -161,16 +180,16 @@
 				<div class="default-contact">
 					<h2>Tags</h2>
 					<ul class="contact-tags">						
-						<li><a href="">Agent Login</a></li>
-						<li><a href="">Customer Login</a></li>
-						<li><a href="">Not a Member?</a></li>
-						<li><a href="">Contact</a></li>
-						<li><a href="">New Horizons</a></li>
-						<li><a href="">Lanscape</a></li>
-						<li><a href="">Tags</a></li>
-						<li><a href="">Nice</a></li>
-						<li><a href="">Some</a></li>
-						<li><a href="">Portrait</a></li>
+						<li><button class="btn">Agent Login</button>
+						<li><button class="btn">Customer Login</button>
+						<li><button class="btn">Not a Member?</button>
+						<li><button class="btn">Contact</button>
+						<li><button class="btn">New Horizons</button>
+						<li><button class="btn">Lanscape</button>
+						<li><button class="btn">Tags</button>
+						<li><button class="btn">Nice</button>
+						<li><button class="btn">Some</button>
+						<li><button class="btn">Portrait</button>
 					</ul>
 				</div>
 				<div class="default-contact">

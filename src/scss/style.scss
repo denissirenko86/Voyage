@@ -2,18 +2,69 @@
 @import "partials/fonts";
 @import "partials/variable";
 
-body{
-	font-family: 'Roboto', sans-serif;
+@font-face {
+    font-family: 'robotolight';
+    src: url('../fonts/roboto-light-webfont.woff2') format('woff2'),
+         url('../fonts/roboto-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'robotomedium';
+    src: url('../fonts/roboto-medium-webfont.woff2') format('woff2'),
+         url('../fonts/roboto-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'robotoregular';
+    src: url('../fonts/roboto-regular-webfont.woff2') format('woff2'),
+         url('../fonts/roboto-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body {
+	font-family: 'robotoregular', sans-serif;
 }
 
 a {
 	text-decoration: none;
 }
 
+/* Default classes start */
 .d-block {
 	display: block;
 }
 
+.default-section {
+	padding-top: 80px;
+	padding-bottom: 120px;
+} 
+
+.default-title {
+	font-family: 'robotomedium', sans-serif;
+	font-size: 25px;
+	margin-bottom: 15px;
+}
+
+.default-text {
+	font-family: 'robotoregular', sans-serif;
+	font-size: 16px;
+	margin-bottom: 65px;
+}
+
+.bg-blue {
+	background-color: #2c3e50;
+}
+
+/* Default classes end */
+// Visual start
 .visual {
 	background: url(../img/main-foto.jpg) no-repeat;
 	background-size: cover;
@@ -28,27 +79,24 @@ a {
 .visual-header {
 	position: absolute;
 	top: 100%;
-}
-
-.register-header {
-	background-color: #2c3e50;
+	left: 0;
 }
 
 .container {
-	width: 1200px;
+	max-width: 1200px;
 	padding: 0 15px;
 	margin: 0 auto;
 }
 
-.contact-header {
+.visual .contact-header {
 	height: 40px;
-	background-color: #2c3e50;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 }
 
-.contact-header li {
+.contact-header li {	
+	font-size: 15px;
 	color: #fff;
 }
 
@@ -73,8 +121,15 @@ a {
 	padding-left: 0;
 }
 
+.register a {
+	font-family: 'robotolight';
+	font-size: 15px;
+}
+
 .register span {
-	padding-left: 15px;
+	font-family: 'robotolight';
+	font-size: 15px;
+	margin-left: 15px;
 }
 
 .social {
@@ -83,8 +138,11 @@ a {
 
 .social li { 
     border-left: 1px solid #17202a;
-    padding: 11px 15px;
-	
+    padding: 11px 15px;	
+}
+
+.social .svg-inline--fa {
+	font-size: 16px;
 }
 
 .main-header {
@@ -98,6 +156,11 @@ a {
 	align-items: center;
 }
 
+.main-nav {
+	display: flex;
+	align-items: center;
+}
+
 .nav {
 	display: flex;
 	align-items: center;
@@ -105,7 +168,6 @@ a {
 
 .nav a {
 	font-size: 15px;
-	font-weight: 500;
 	color: #5d6e80;
 }
 
@@ -113,20 +175,31 @@ a {
 	color: #1dd2af;
 }
 
-.nav li {
-	padding-right: 40px;
+.nav li a {
+	font-family: 'robotomedium', sans-serif;
+	font-size: 15px;
+	text-transform: uppercase;
+}
+
+.nav li + li {
+	margin-left: 40px;
 }
 
 .search {
+	margin-left: 35px;
 	font-size: 20px;
 	color: #2c3e50;
 	padding: 10px;
 	border: 1px solid #2c3e50;
-	border-radius: 50%;
-	
+	border-radius: 50%;	
+}
+
+.search:hover {
+	color: #1dd2af;
 }
 
 .visual-text {
+	width: 100%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -136,31 +209,35 @@ a {
     transform: translate(-50%,-50%);
 }
 
-h1 {
+.visual-text h1 {
+	font-family: 'robotoregular', sans-serif;
 	font-size: 50px;
-	text-transform: uppercase;
-	font-weight: bold;
 	color: #fff;
+	margin-bottom: 25px;
+	text-transform: uppercase;
 }
 
 .visual-text p {
-	padding-top: 25px;
+	font-family: 'robotoregular', sans-serif;
 	font-size: 25px;
-	font-weight: 400;
 	color: #fff;
+	margin-bottom: 45px;
 }
 
 .visual-text button {
-	margin: 45px 28px;
+	font-family: 'robotoregular', sans-serif;
 	padding: 20px;
 	text-transform: uppercase;
 	font-size: 25px;
-	font-weight: 400;
 	background-color: transparent;
 	color: #fff;
 	border: 2px solid #fff;
 	border-radius: 5px;	
 }
+
+.visual-text button + button {
+	margin-left: 30px;
+} 
 
 .visual-text button:hover {
 	background: #1dd2af;
@@ -169,16 +246,17 @@ h1 {
 
 .visual-footer {
 	border-top: 1px solid #3a4e61;	
-	background-color: #2c3e50;
 }
 
 .text-form {
 	display: block;
-	padding-right: 50px;
-	border-right: 1px solid #3a4e61;
+	margin-right: 50px;
 }
 
 .visual-form input {
+	font-family: 'robotoregular', sans-serif;
+	font-size: 20px;
+	color: #8a8a8a;
 	width: 325px;
 	height: 50px;
 	padding-left: 12px;
@@ -186,11 +264,11 @@ h1 {
 }
 
 .visual-form input[type="submit"] {
+	font-family: 'robotoregular', sans-serif;
 	margin-left: 20px;
 	width: 110px;
 	height: 52px;
 	font-size: 20px;
-	font-weight: 400;
 	background: #1dd2af;
 	color: #fff;
 }
@@ -200,183 +278,221 @@ h1 {
 }
 
 .text-form p {
+	font-family: 'robotoregular', sans-serif;
 	font-size: 20px;
 	color: #9fb0c0;
 }
 
 .text-form h3 {
+	font-family: 'robotoregular', sans-serif;
 	font-size: 25px;
 	color: #fff;
 }
 
 .form-section {
-	height: 105px;
+	padding: 30px 0;
 	display: flex;
 	align-items: center;
 }
 
 .form-section span {
-	padding: 0 25px;
+	font-family: 'robotolight', sans-serif;
+	margin:25px;
 	font-size: 22px;
-	font-weight: 300;
 	color: #9fb0c0;
 }
 
-// /visual
-
-
-.offers h2 {
-	font-size: 25px;
+// visual end
+// offers start
+.offers .default-title {
+	text-transform: uppercase;
 	color: #2c3e50;
-	font-weight: 500;
 	text-align: center;
-	margin-top: 90px;
 }
 
-.offers p {
-	font-size: 16px;
+.offers .default-text {
 	color: #626262;
-	font-weight: 400;
 	text-align: center;
-	margin-top: 15px;
-}
-
-.offers-slider {
-	margin: 90px 0 150px;
-
 }
 
 .block-country {
-	text-align: center;
-	margin: 0 20px;
+	min-width: 275px;
+	padding-top: 5px;
+	padding-bottom: 20px;
+	background-color: #eee;
+	border-radius: 5px;
+	border: 5px solid transparent;
 }
 
-.block-country img {
+.block-country:hover {
+	cursor: pointer;
+	background-color: #2c3e50;
+	border: 5px solid #1dd2af;
+}
+
+.block-country:hover img {
+	filter: contrast(150%);
+}
+
+.block-country:hover h4 {
+	color: #fff;
+}
+
+.block-country:hover span {
+	color: #8899a8;
+}
+
+.block-country:hover .svg-inline--fa {
+	color: #fff;
+}
+
+.slick-slide {
+	margin: 0 10px;
+}
+
+.slick-slide img {
 	margin: auto;
-	width: 266px;
-	height: 193px;
 }
 
 .offers-slider h4 {
-	padding: 20px 12px 5px;
+	font-family: 'robotoregular', sans-serif;
+	margin: 20px 0 5px 0;
 	font-size: 15px;
 	color: #626262;
+	margin-left: 20px;
 }
 
 .offers-slider span {
+	font-family: 'robotoregular', sans-serif;
 	font-size: 13px;
 	color: #626262;
-	padding: 5px 0 18px 12px;
+	margin-right: 20px;
+	margin-left: 20px;
 }
 
-// /offers
+.offers-slider .svg-inline--fa {
+	font-size: 15px;
+	color: #9fb0c0;
+}
 
+//offers end
+// holidays start
 
 .holidays {
-	background: url(../img/holiday-bg.jpg);
+	background: url(../img/holiday-bg.jpg) no-repeat;
 }
 
 .holidays-type {
 	display: flex;
+	justify-content: center;
 }
 
 .holidays-type li {
-	padding: 70px 20px 20px 20px;
+	text-align: center;
 } 
 
-.holidays h2 {
-	padding-top: 80px;
-	font-size: 25px;
+.holidays-type li + li {
+	margin-left: 35px;
+}
+
+.holidays-type li a img {
+	margin-bottom: 15px;
+}
+
+.holidays-type li a img.green {
+	display: none;
+}
+
+.holidays-type li:hover a img.white {
+	display: none;
+}
+
+.holidays-type li:hover a img.green {
+	display: block;	
+}
+
+.holidays-type li:hover p {
+	color: #1dd2af;
+}
+
+.holidays .default-title {
 	text-transform: uppercase;
 	color: #fff;
 	text-align: center;
 }
 
-.holidays p {
-	font-size: 16px;
+.holidays .default-text {
 	color: #9eafc0;
 	text-align: center;
-	padding-top: 15px;
-}
-
-.holidays-type img {
-	color: #fff;
 }
 
 .holidays-type p {
+	font-family: 'robotoregular', sans-serif;
 	font-size: 20px;
 	color: #9dafc0;
-	padding-bottom: 95px;
 }
 
 .holidays-type a:hover {
 	color: #1dd2af;
 }
-
-
-// /holidays
+//holidays end
+// happy start
 
 
 .happy {
 	background-color: #fff;
 }
 
-.happy h2 {
-	font-size: 25px;
+.happy .default-title {
 	color: #2c3e50;
-	font-weight: bold;
 	text-align: center;
-	padding-top: 70px;
 	text-transform: uppercase;
 }
 
-.happy h4 {
-	font-size: 16px;
+.happy .default-text {
 	color: #626262;
-	padding-top: 15px;
 	text-align: center;
 }
 
-.reviews {
-	display: flex;
-	padding-top: 50px;
-}
-
 .client-text {
-	position: relative;
-	width: 475px;
-	height: 145px;
-	margin: 0 10px 150px 10px;
-	padding: 25px 20px 20px 20px;
+	padding: 25px;
 	border: 1px solid #dedede;
+	border-top: 5px solid #dedede;
 }
 
-.client-text span {
-	font-size: 15px;
-	color: #4d4d4d;
-	text-align: justify;
-}
-
-.client-text h3 {
-	padding-top: 8px;
-	font-size: 18px;
-	color: #1dd2af;
+.client-text:hover {
+	border-top: 5px solid #1dd2af;
 }
 
 .client-text p {
-	padding-top: 6px;
+	font-family: 'robotoregular', sans-serif;
+	font-size: 15px;
+	line-height: 21px;
+	color: #4d4d4d;
+	margin-bottom: 10px;
+}
+
+.client-text .client {
+	display: block;
+	font-family: 'robotoregular', sans-serif;
+	font-size: 18px;
+	color: #1dd2af;
+	margin-bottom: 5px;
+}
+
+.client-text .coutry {
+	font-family: 'robotoregular', sans-serif;
 	font-size: 13px;
 	color: #b2b2b2;
 }
 
-.client-text a:hover {
-	font-weight: bold;
-}
 
-// /happy
+
+//happy end
+// contact start
 
 .contact {
-	padding: 60px 0;
+	padding: 65px 0;
 	background-color: #2c3e50;
 	border-bottom: 1px solid #394c5f;
 }
@@ -402,15 +518,15 @@ h1 {
 }
 
 .default-contact h2 {
+	font-family: 'robotoregular', sans-serif;
 	margin-bottom: 20px;
 	font-size: 25px;
 	color: #1dd2af;
-	font-weight: bold;
 }
 
 .default-contact p {
+	font-family: 'robotoregular', sans-serif;
 	margin-bottom: 5px;
-	display: inline-block;
 	font-size: 13px;
 	line-height: 22px;
 	color: #fff;
@@ -442,7 +558,7 @@ h1 {
 
 .contact-form input[type="submit"] {
 	width: 45px;
-	height: 30px;
+	height: 34px;
 	border: 1px solid #19242e;
 	border-radius: 2px;
 	background: #1dd2af;
@@ -473,19 +589,18 @@ h1 {
 	flex-wrap: wrap;
 }
 
-.contact .contact-tags li {
+.btn {
+	font-size: 13px;
+	color: #fff;
+	background-color: #2c3e50;
 	padding: 8px 10px;
 	border: 1px solid #fff;
 	margin: 5px;
-}
-
-.contact .contact-tags a {
-	font-size: 13px;
-	color: #fff;
 } 
 
-.contact .contact-tags a:hover {
+.btn:hover {
 	color: #1dd2af;
+	border: 1px solid #1dd2af;
 }
 
 // contact end
