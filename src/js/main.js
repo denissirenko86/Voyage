@@ -1,15 +1,7 @@
-// $('.offers-slider').slick({
-//   slidesToShow: 4,
-//   slidesToScroll: 1,
-//   arrows: false,
-//   autoplay: true,
-//   autoplaySpeed: 2000,
-// });
-
 $('.offers-slider').slick({
   dots: false,
   infinite: true,
-  slidesToShow: 4,
+  slidesToShow: 5,
   slidesToScroll: 1,
   arrows: false,
   autoplay: true,
@@ -20,7 +12,7 @@ $('.offers-slider').slick({
         slidesToShow: 3,
         slidesToScroll: 3,
         infinite: true,
-        dots: true
+        dots: false
       }
     },
     {
@@ -54,7 +46,7 @@ $('.reviews').slick({
         slidesToShow: 3,
         slidesToScroll: 3,
         infinite: true,
-        dots: true
+        dots: false
       }
     },
     {
@@ -75,6 +67,7 @@ $('.reviews').slick({
 });
 
 // Scroll 
+
 const scrollBtn = $('[data-scroll]'); 
 
 function onClick(e) {
@@ -86,6 +79,12 @@ function onClick(e) {
 
 scrollBtn.on('click', onClick); 
 
+// Slick nav
+
+$('.nav').slicknav({
+  appendTo: '.main-header .container .nav-header',
+  label: ''
+});
 
 
 

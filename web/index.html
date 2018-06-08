@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Voyage</title>
+	<link rel="stylesheet" href="css/slicknav.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">	
 </head>
@@ -40,7 +41,7 @@
 								<li><a href="#">Destinations</a></li>
 								<li><a href="#">Criuses</a></li>
 								<li><a href="#">Specials</a></li>
-								<li><a href="#">Holidays</a></li>		
+								<li><a href="#" data-scroll=".happy">Holidays</a></li>		
 							</ul>
 							<a href="#" class="search"><i class="fas fa-search"></i></a>
 						</nav>			
@@ -65,9 +66,15 @@
 					</div>
 					<form action="#" class="visual-form">
 						<span>Where</span>
-						<input type="search" placeholder="distination">			
+						<div class="input-item">
+							<input type="search" placeholder="distination">	
+							<i class="fas fa-globe"></i>
+						</div>								
 						<span>When</span>
-						<input placeholder="select date" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="date">
+						<div class="input-item">
+							<input placeholder="select date" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="date">
+							<i class="far fa-calendar-alt"></i>
+						</div>						
 				        <input type="submit" value="Search">
 			        </form>	
 			    </div>
@@ -210,18 +217,12 @@
 	<footer class="main-footer">
 		<div class="container">
 			<ul class="nav-main-footer">
-				<li><a href="#">Home</a></li>
-				<li><span>::</span></li>
-				<li><a href="#">Destinations</a></li>
-				<li><span>::</span></li>
-				<li><a href="#">Criuses</a></li>
-				<li><span>::</span></li>
-				<li><a href="#">Specils</a></li>
-				<li><span>::</span></li>
-				<li><a href="#">Holidays</a></li>
-				<li><span>::</span></li>
-				<li><a href="#">Blog</a></li>
-				<li><span>::</span></li>
+				<li><a href="#">Home</a><span>::</span></li>
+				<li><a href="#">Destinations</a><span>::</span></li>
+				<li><a href="#">Criuses</a><span>::</span></li>
+				<li><a href="#">Specils</a><span>::</span></li>
+				<li><a href="#">Holidays</a><span>::</span></li>
+				<li><a href="#">Blog</a><span>::</span></li>
 				<li><a href="#">Contact Us</a></li>
 			</ul>
 			<span>Copyright @voyage. All Right Reserved.</span>
@@ -238,6 +239,7 @@
   	crossorigin="anonymous"></script>
   	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 	<script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+	<script src="js/jquery.slicknav.min.js"></script>
 	<script src="js/main.js"></script>
 </body>
 </html>

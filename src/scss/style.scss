@@ -8,7 +8,6 @@
          url('../fonts/roboto-light-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
 }
 
 @font-face {
@@ -17,7 +16,6 @@
          url('../fonts/roboto-medium-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
 }
 
 @font-face {
@@ -26,7 +24,6 @@
          url('../fonts/roboto-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
 }
 
 body {
@@ -89,7 +86,7 @@ a {
 }
 
 .visual .contact-header {
-	height: 40px;
+	overflow: hidden;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -114,7 +111,7 @@ a {
 
 .register li {
 	border-right: 1px solid #17202a;
-    padding: 11px 15px;
+    padding: 12px 15px;
 }
 
 .register li:first-child {
@@ -138,7 +135,7 @@ a {
 
 .social li { 
     border-left: 1px solid #17202a;
-    padding: 11px 15px;	
+    padding: 12px 15px;	
 }
 
 .social .svg-inline--fa {
@@ -150,7 +147,7 @@ a {
 }
 
 .nav-header {
-	height: 90px;
+	padding: 32px 0;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -249,25 +246,42 @@ a {
 }
 
 .text-form {
-	display: block;
 	margin-right: 50px;
 }
 
-.visual-form input {
+.visual-form {
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+}
+
+.input-item {
+	position: relative;
+	max-width: 325px;
+}
+
+.input-item .svg-inline--fa {
+	font-size: 20px;
+	color: #a4a4a4;
+	position: absolute;
+	right: 15px;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.input-item input {
 	font-family: 'robotoregular', sans-serif;
 	font-size: 20px;
 	color: #8a8a8a;
-	width: 325px;
-	height: 50px;
-	padding-left: 12px;
+	width: 100%;
+	padding: 15px 10px;
 	border: 1px solid #19242e;
 }
 
 .visual-form input[type="submit"] {
 	font-family: 'robotoregular', sans-serif;
 	margin-left: 20px;
-	width: 110px;
-	height: 52px;
+	padding: 15px 30px;
 	font-size: 20px;
 	background: #1dd2af;
 	color: #fff;
@@ -293,6 +307,7 @@ a {
 	padding: 30px 0;
 	display: flex;
 	align-items: center;
+	justify-content: space-between;
 }
 
 .form-section span {
@@ -300,6 +315,15 @@ a {
 	margin:25px;
 	font-size: 22px;
 	color: #9fb0c0;
+}
+
+@media (max-width: 991px) {
+	.nav {
+		display: none;
+	}
+	.slicknav_menu {
+		display: block;
+	}
 }
 
 // visual end
@@ -379,23 +403,23 @@ a {
 // holidays start
 
 .holidays {
-	background: url(../img/holiday-bg.jpg) no-repeat;
+	background: url(../img/holiday-bg.jpg) no-repeat center / cover;
 }
 
 .holidays-type {
 	display: flex;
-	justify-content: center;
+	flex-wrap: wrap;
 }
 
 .holidays-type li {
+	width: calc(100% / 6 - 30px);
 	text-align: center;
+	margin: 0 15px;
 } 
 
-.holidays-type li + li {
-	margin-left: 35px;
-}
-
 .holidays-type li a img {
+	width: 100%;
+	height: auto;
 	margin-bottom: 15px;
 }
 
@@ -434,6 +458,30 @@ a {
 
 .holidays-type a:hover {
 	color: #1dd2af;
+}
+
+@media (max-width: 991px) {
+	.holidays-type li {
+		width: calc(100% / 3 - 30px);
+		text-align: center;
+		margin: 15px;
+	} 
+}
+
+@media (max-width: 767px) {
+	.holidays-type li {
+		width: calc(100% / 2 - 30px);
+		text-align: center;
+		margin: 15px;
+	} 
+}
+
+@media (max-width: 576px) {
+	.holidays-type li {
+		width: calc(100% / 1 - 30px);
+		text-align: center;
+		margin: 15px;
+	} 
 }
 //holidays end
 // happy start
@@ -510,10 +558,15 @@ a {
 
 .contact-us {
 	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin: 0 -15px;
 }
 
 .default-contact {
-	width: 25%;
+	width: calc(100% / 4 - 30px);
+	margin: 0 15px;
+	font-size: 13px;
 	text-align: left;
 }
 
@@ -530,10 +583,6 @@ a {
 	font-size: 13px;
 	line-height: 22px;
 	color: #fff;
-}
-
-.default-contact {
-	font-size: 13px;
 }
 
 .contact-form {
@@ -603,6 +652,20 @@ a {
 	border: 1px solid #1dd2af;
 }
 
+@media (max-width: 991px) {
+	.default-contact {
+		width: calc(100% / 2 - 30px);
+		margin-bottom: 50px;
+	} 
+}
+
+@media (max-width: 767px) {
+	.default-contact {
+		width: calc(100% / 1 - 30px);
+		margin-bottom: 50px;
+	} 
+}
+
 // contact end
 
 .main-footer {
@@ -615,10 +678,12 @@ a {
 	margin-bottom: 18px;
 	display: flex;
 	justify-content: center;
+	flex-wrap: wrap;
 }
 
 .nav-main-footer li {
-	margin-right: 10px;
+	display: flex;
+	margin: 5px 0;
 }
 
 .nav-main-footer a {
@@ -630,9 +695,10 @@ a {
 	color: #21b299;
 }
 
-.main-footer span {
+.main-footer .nav-main-footer span {
 	color: #fff;
 	font-size: 15px;
+	margin: 0 5px;
 }
 
 .copy {
@@ -674,3 +740,5 @@ a {
 	color: #9dafc0;
 	font-size: 13px;
 }
+
+// main-footer end
